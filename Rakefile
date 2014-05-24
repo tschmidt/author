@@ -6,3 +6,5 @@ Rake::TestTask.new do |task|
   task.pattern = 'test/**/*_test.rb'
   task.verbose = false
 end
+
+task :default => [:test]
