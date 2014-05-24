@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+# -*- mode: ruby -*-
+path = File.join(File.dirname(__FILE__), '..', 'lib')
+
+$:.unshift path
+
+require 'author'
+Author::Commands::Cli.start

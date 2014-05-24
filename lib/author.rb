@@ -15,6 +15,7 @@ end
 # internals
 require 'author/version'
 
+require_all 'author/commands'
 
 module Author
   
