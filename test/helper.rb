@@ -2,19 +2,36 @@ require 'minitest'
 require 'minitest/autorun'
 require 'minitest/spec/expect'
 require 'minitest/pride'
+require_relative 'utils/assertions'
 
 module AuthorHelpers
+  include FileUtils
   
   def capture(stream = :stdout)
     begin
-      stream = stream.to_s
-      eval "$#{stream} = StringIO.new"
+      strm = stream.to_s
+      eval "$#{strm} = StringIO.new"
       yield
-      result = eval("$#{stream}").string
+      result = eval("$#{strm}").string
     ensure
-      eval("$#{stream} = #{stream.upcase}")
+      eval("$#{strm} = #{strm.upcase}")
     end
     result
+  end
+  
+  def sandbox_path
+    File.join(File.dirname(__FILE__), 'sandbox')
+  end
+  
+  def play_in_sandbox
+    cd(sandbox_path) do
+      yield
+    end
+  end
+  
+  def clean_sandbox
+    rm_rf(sandbox_path)
+    mkdir_p(sandbox_path)
   end
   
 end

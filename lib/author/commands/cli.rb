@@ -1,6 +1,7 @@
 require 'thor'
 require_relative 'version'
 require_relative 'check'
+require_relative 'generator'
 
 module Author
   module Commands
@@ -10,6 +11,7 @@ module Author
       map %w[-v --version] => :version
       
       register Author::Commands::Check, 'check', 'check', 'Check that all dependencies are installed'
+      register Author::Commands::Generator, 'new', 'new <book-name>', 'Create a new book project'
       
     end
   end

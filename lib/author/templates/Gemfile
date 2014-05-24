@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+# gem 'author' # Uncomment this once the gem is published.
+gem 'kramdown'
+gem 'coderay'
+gem 'eeepub'
