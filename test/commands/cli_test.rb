@@ -3,9 +3,16 @@ require 'author/commands/cli'
 
 describe Author::Commands::Cli do
   
+  let(:output) do
+    capture(:stdout) { Author::Commands::Cli.start }
+  end
+  
   it "should respond to version" do
-    output = capture(:stdout) { Author::Commands::Cli.start }
     expect(output).to_include "version"
+  end
+  
+  it "should respond to check" do
+    expect(output).to_include "check"
   end
 
 end

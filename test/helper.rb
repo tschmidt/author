@@ -5,7 +5,7 @@ require 'minitest/pride'
 
 module AuthorHelpers
   
-  def capture(stream)
+  def capture(stream = :stdout)
     begin
       stream = stream.to_s
       eval "$#{stream} = StringIO.new"
