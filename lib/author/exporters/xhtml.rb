@@ -4,7 +4,7 @@ require 'author/plugins/awesome_codeblock'
 
 module Author
   module Exporters
-    class XHTML
+    class XHTML < Base
       # step 1: get file names from the outline.txt file
       # step 2: create a new file called all.md
       # step 3: concatenate all files and output to all.md
@@ -18,14 +18,6 @@ module Author
         exporter.combine_all_files
         exporter.liquify
         exporter.kramdownify
-      end
-      
-      def root_dir
-        Dir.pwd
-      end
-      
-      def source_dir
-        File.join(root_dir, 'chapters')
       end
       
       def outline_path
@@ -44,10 +36,6 @@ module Author
       
       def combined_file_path
         File.join(source_dir, 'all.md')
-      end
-      
-      def output_path
-        File.join(source_dir, '..', 'export', 'book.xhtml')
       end
       
       def layout_path

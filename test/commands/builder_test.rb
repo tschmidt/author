@@ -4,10 +4,14 @@ require 'author/commands/builder'
 describe Author::Commands::Builder do
   
   let(:builder) { Author::Commands::Builder }
+  let(:output) { capture { builder.start } }
   
   it "should respond to xhtml" do
-    output = capture { builder.start }
     expect(output).to_include "xhtml"
+  end
+  
+  it "should respond to pdf" do
+    expect(output).to_include "pdf"
   end
   
 end

@@ -1,4 +1,5 @@
 require_relative '../helper'
+require 'author/exporters/base'
 require 'author/exporters/xhtml'
 
 describe Author::Exporters::XHTML do
