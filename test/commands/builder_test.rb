@@ -14,4 +14,8 @@ describe Author::Commands::Builder do
     expect(output).to_include "pdf"
   end
   
+  it "should respond to mobi" do
+    expect(output).to_include "mobi"
+  end
+  
 end

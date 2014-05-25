@@ -18,6 +18,14 @@ module Author
         Author::Exporters::PDF.export
       end
       
+      desc "mobi", "Build .mobi format"
+      def mobi
+        say "Building the XHTML site"
+        Author::Exporters::XHTML.export
+        say "Building the .mobi file"
+        Author::Exporters::Mobi.export
+      end
+      
     end
   end
 end
