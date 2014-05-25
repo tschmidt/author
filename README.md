@@ -1,5 +1,7 @@
 # Author
 
+[![Build Status](https://travis-ci.org/tschmidt/author.svg?branch=master)](https://travis-ci.org/tschmidt/author)
+
 **ATTN:** This is still **very** alpha. Not everything is working. Use at your own risk.
 
 A simple tool to help you write your next ebook.
