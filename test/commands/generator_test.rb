@@ -15,6 +15,7 @@ describe Author::Commands::Generator do
       'abook'.must_be_a_directory
       'abook/chapters'.must_be_a_directory
       'abook/export'.must_be_a_directory
+      'abook/templates'.must_be_a_directory
     end
   end
   
@@ -26,6 +27,7 @@ describe Author::Commands::Generator do
       'ihazfiles/Gemfile'.must_be_a_file
       'ihazfiles/outline.txt'.must_be_a_file
       'ihazfiles/chapters/sample.md'.must_be_a_file
+      'ihazfiles/templates/layout.xhtml'.must_be_a_file
     end
   end
   

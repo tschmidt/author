@@ -24,6 +24,9 @@ module Author
         copy_file   'Gemfile', 'Gemfile'
         create_file 'outline.txt'
         template    'sample.md', 'chapters/sample.md'
+        template    'layout.xhtml', 'templates/layout.xhtml'
+        
+        gsub_file 'templates/layout.xhtml', '<!-- insert @body -->', '<%= @body %>'
       end
       
       def bundle_gems
