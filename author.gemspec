@@ -24,4 +24,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest-spec-expect"
   
   spec.add_dependency "thor"
+  spec.add_dependency "liquid"
+  spec.add_dependency "coderay"
 end

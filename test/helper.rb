@@ -40,6 +40,16 @@ module AuthorHelpers
     rm_rf(sandbox_path)
   end
   
+  def liquid_templates_path
+    File.join(File.dirname(__FILE__), 'liquids')
+  end
+  
+  def using_liquid_templates
+    cd(liquid_templates_path) do
+      yield
+    end
+  end
+  
 end
 MiniTest::Test.send :include, AuthorHelpers
 

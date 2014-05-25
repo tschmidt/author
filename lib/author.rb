@@ -14,8 +14,8 @@ end
 
 # internals
 require 'author/version'
-
 require_all 'author/commands'
+require_all 'author/plugins'
 
 module Author
   
