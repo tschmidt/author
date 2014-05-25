@@ -54,10 +54,6 @@ module Author
       
       attr_accessor :title, :language, :markup, :options, :code
       
-      DEFAULTS = {
-        css: :class
-      }
-      
       def initialize(tag_name, markup, tokens)
         @markup = markup
         super
