@@ -56,7 +56,8 @@ module AuthorHelpers
   
   def ensure_clean_book
     rm_f File.join(sample_book_path, 'chapters', 'all.md')
-    rm_f File.join(sample_book_path, 'export', 'book.xhtml')
+    rm_f File.join(sample_book_path, 'export')
+    mkdir_p File.join(sample_book_path, 'export')
   end
   
   def inside_sample_book
