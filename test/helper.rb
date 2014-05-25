@@ -50,6 +50,23 @@ module AuthorHelpers
     end
   end
   
+  def sample_book_path
+    File.join(File.dirname(__FILE__), 'sample_book')
+  end
+  
+  def ensure_clean_book
+    rm_f File.join(sample_book_path, 'chapters', 'all.md')
+    rm_f File.join(sample_book_path, 'export', 'book.xhtml')
+  end
+  
+  def inside_sample_book
+    ensure_clean_book
+    cd(sample_book_path) do
+      yield
+    end
+    ensure_clean_book
+  end
+  
 end
 MiniTest::Test.send :include, AuthorHelpers
 

@@ -1,0 +1,4 @@
+---
+  title: test/sample_book
+  markdown: kramdown
+  highlighter: coderay

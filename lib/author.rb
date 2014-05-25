@@ -11,11 +11,16 @@ end
 # stdlib
 
 # 3rd party
+require 'liquid'
+require 'coderay'
+require 'thor'
+require 'kramdown'
 
 # internals
 require 'author/version'
 require_all 'author/commands'
 require_all 'author/plugins'
+require_all 'author/exporters'
 
 module Author
   

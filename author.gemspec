@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "thor"
   spec.add_dependency "liquid"
   spec.add_dependency "coderay"
+  spec.add_dependency "kramdown"
 end
