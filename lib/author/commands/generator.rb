@@ -26,7 +26,9 @@ module Author
         template    'sample.md', 'chapters/sample.md'
         template    'layout.xhtml', 'templates/layout.xhtml'
         
-        gsub_file 'templates/layout.xhtml', '<!-- insert @body -->', '<%= @body %>'
+        gsub_file   'templates/layout.xhtml', '<!-- insert @body -->', '<%= @body %>'
+        
+        copy_file   'book.css', 'export/book.css'
       end
       
       def bundle_gems

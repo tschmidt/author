@@ -28,6 +28,7 @@ describe Author::Commands::Generator do
       'ihazfiles/outline.txt'.must_be_a_file
       'ihazfiles/chapters/sample.md'.must_be_a_file
       'ihazfiles/templates/layout.xhtml'.must_be_a_file
+      'ihazfiles/export/book.css'.must_be_a_file
     end
   end
   
