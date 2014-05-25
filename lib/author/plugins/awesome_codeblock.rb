@@ -95,7 +95,7 @@ module Author
         lines = ''
         wrapped_code = ''
         code.strip.split("\n").each_with_index do |line, index|
-          index += 1
+          index += starting_line_number
           line = "&nbsp;" if line.empty?
           lines        += %Q[<div class="line-number#{' highlight' if lines_to_highlight && lines_to_highlight.include?(index)}">#{index}</div>]
           wrapped_code += %Q[<div class="code-part#{' highlight' if lines_to_highlight && lines_to_highlight.include?(index)}">#{line}</div>]
@@ -122,7 +122,7 @@ module Author
       end
       
       def show_line_numbers?
-        show_line_numbers || lines_to_highlight
+        show_line_numbers || lines_to_highlight || starting_line_number > 1
       end
       
       def show_line_numbers
@@ -131,6 +131,10 @@ module Author
       
       def lines_to_highlight
         (markup =~ /\s*highlight:['"]?([^"'\s]+)*['"]?/i) ? $1.split(/, ?/).map(&:to_i) : false
+      end
+      
+      def starting_line_number
+        (markup =~ /\s*start_at:['"]?([^"'\s]+)['"]?/i) ? $1.to_i : 1
       end
       
     end

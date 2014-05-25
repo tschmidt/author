@@ -69,4 +69,13 @@ describe Author::Plugins::AwesomeCodeblock do
     end
   end
   
+  context "with starting line number set" do
+    it "should start the line count at the number given" do
+      using_liquid_templates do
+        rendered = liquid.parse(IO.read('starting_line_number.md')).render
+        expect(rendered).to_include %q[<td class="gutter"><div class="line-number">15</div></td>]
+      end
+    end
+  end
+  
 end
