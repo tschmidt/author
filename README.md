@@ -1,6 +1,6 @@
 # Author [![GitHub version](https://badge.fury.io/gh/tschmidt%2Fauthor.svg)](http://badge.fury.io/gh/tschmidt%2Fauthor)
 
-[![Build Status](https://travis-ci.org/tschmidt/author.svg?branch=master)](https://travis-ci.org/tschmidt/author) [![Dependency Status](https://gemnasium.com/jekyll/jekyll.svg)](https://gemnasium.com/jekyll/jekyll)
+[![Build Status](https://travis-ci.org/tschmidt/author.svg?branch=master)](https://travis-ci.org/tschmidt/author) [![Dependency Status](https://gemnasium.com/tschmidt/author.svg)](https://gemnasium.com/tschmidt/author)
 
 **ATTN:** This is still **very** alpha. Not everything is working. Use at your own risk.
 
