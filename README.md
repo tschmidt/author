@@ -1,21 +1,23 @@
-# Author
+# Author [![GitHub version](https://badge.fury.io/gh/tschmidt%2Fauthor.svg)](http://badge.fury.io/gh/tschmidt%2Fauthor)
 
-[![Build Status](https://travis-ci.org/tschmidt/author.svg?branch=master)](https://travis-ci.org/tschmidt/author)
+[![Build Status](https://travis-ci.org/tschmidt/author.svg?branch=master)](https://travis-ci.org/tschmidt/author) [![Dependency Status](https://gemnasium.com/jekyll/jekyll.svg)](https://gemnasium.com/jekyll/jekyll)
 
 **ATTN:** This is still **very** alpha. Not everything is working. Use at your own risk.
+
+*[imho]: In my humble opinion
 
 A simple tool to help you write your next ebook.
 
 I had a major itch and this is what I used to scratch it. I wanted to write an ebook, but
-just could not find a toolset that had everything I wanted. Leanpub was too limited on the
+couldn't find a toolset that had everything I wanted. Leanpub was too limited on the
 styling of the book. Kitabu drove me nuts with the hoops I had to jump through with
 nokogiri. Wordsmith didn't do it for me either.
 
 What was I looking for?
 
-- Simple way to write my chapters in Markdown
+- A simple way to write my chapters in Markdown
 - Generate PDFs and ePubs that were pretty to look at
-- Have better looking codeblocks
+- Have better looking code blocks
 - Not have to do a ton of configuration!!!!
 
 Thus, Author was born.
@@ -34,7 +36,7 @@ Or install it yourself with:
 
     $ gem install author
 
-## Usage
+## Quick Start Guide
 
     $ author new mybook
     $ cd mybook
@@ -50,15 +52,26 @@ finished book:
 
 Once you've done that, just run one of the following commands:
 
-    author build xhtml # Generates the finalized XHTML site used for the other commands
-    author build pdf   # Generates a PDF of your book
-    author build epub  # Generates a fixed layout ePub that your eyeballs will love
+    author build xhtml
+    author build pdf
+    author build epub
+    author build mobi
     author build all   # Builds everything in one go
 
 That's it!
 
-Okay, there are a few other things you can do, like add a book cover image and include
-images in your book. But, for the most part, that is all there is to it.
+## Full Tutorial
+
+Coming soon.
+
+## Dependencies
+
+There are a couple of executables that Author requires to do its job.
+
+- [Prince XML](http://www.princexml.com): This is the tool used to create PDFs of your book. The free version of Prince XML is fully functional and adds a small icon to the first page of your PDF. I've looked at other solutions and this - imho - is the best one.
+- [KindleGen](http://www.amazon.com/gp/feature.html?docId=1000765211): This is a tool from Amazon that will generate a `.mobi` file.
+
+You can run `author check` to find out if you have these dependencies installed on your system.
 
 ## Contributing
 
