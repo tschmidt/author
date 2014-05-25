@@ -3,10 +3,6 @@ require 'author/commands/generator'
 
 describe Author::Commands::Generator do
   
-  after do
-    clean_sandbox
-  end
-  
   it "should require a name" do
     output = capture(:stderr) { Author::Commands::Generator.start }
     expect(output).to_include "No value provided for required arguments 'name'"

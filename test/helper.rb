@@ -24,14 +24,20 @@ module AuthorHelpers
   end
   
   def play_in_sandbox
+    ensure_sandbox_is_clean
     cd(sandbox_path) do
       yield
     end
+    empty_sandbox
   end
   
-  def clean_sandbox
+  def ensure_sandbox_is_clean
     rm_rf(sandbox_path)
     mkdir_p(sandbox_path)
+  end
+  
+  def empty_sandbox
+    rm_rf(sandbox_path)
   end
   
 end
