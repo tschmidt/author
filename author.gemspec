@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["terry.m.schmidt@gmail.com"]
   spec.summary       = %q{Quickly create ebooks using Markdown}
   spec.description   = spec.summary
-  spec.homepage      = "http://github.com/tschmidt/aughor"
+  spec.homepage      = "http://github.com/tschmidt/author"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
