@@ -1,5 +1,6 @@
 require 'liquid'
 require 'kramdown'
+require 'author/plugins/awesome_codeblock'
 
 module Author
   module Exporters
@@ -65,7 +66,7 @@ module Author
             filepath = File.join(source_dir, file_name)
             next unless File.file?(filepath)
             output += IO.read(filepath)
-            output += "\n\n" unless file_name = file_names.last
+            output += "\n\n" unless file_name == file_names.last
           end
           return output
         end

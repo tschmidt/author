@@ -13,6 +13,8 @@ module Author
       register Author::Commands::Check, 'check', 'check', 'Check that all dependencies are installed'
       register Author::Commands::Generator, 'new', 'new <book-name>', 'Create a new book project'
       
+      register Author::Commands::Builder, 'build', 'build', 'Build the specified format'
+      
     end
   end
 end

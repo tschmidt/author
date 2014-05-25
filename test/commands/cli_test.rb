@@ -18,5 +18,9 @@ describe Author::Commands::Cli do
   it "should respond to new" do
     expect(output).to_include "new"
   end
+  
+  it "should respond to build" do
+    expect(output).to_include "build"
+  end
 
 end
