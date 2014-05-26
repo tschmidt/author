@@ -24,33 +24,26 @@ Thus, Author was born.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'author'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself with:
-
     $ gem install author
 
-## Quick Start Guide
+## Usage  
 
     $ author new mybook
     $ cd mybook
 
 Add your chapters to the `chapters/` folder. Name them whatever you want. Then, in the
 `outline.txt` file, simply list the chapters in the order you want them to appear in the
-finished book:
+finished book. Here's an example of what `outline.txt` should look like:
 
     preface.md
     about-the-author.md
     who-is-this-for.md
     chapter-1.md
 
-Once you've done that, just run one of the following commands:
+In order to create ePubs, you will need to specify a few things. Open up `config.yml` and
+modify the settings that are listed.
+
+When you're ready to build your ebook, just run one of the following commands:
 
     author build xhtml
     author build pdf
@@ -60,9 +53,27 @@ Once you've done that, just run one of the following commands:
 
 That's it!
 
-## Full Tutorial
+## Extras
 
-Coming soon.
+One of the nice things about using Kramdown is that it provides a way to generate a table
+of contents [TOC]. If you would like to add a TOC to your book, simply add a file to the
+`chapters/` folder - might I suggest `toc.md` - and include the following:
+
+```
+## Table of Contents
+{:.no_toc}
+
+* this will be replaced
+{:toc}
+```
+
+Then, in the `outline.txt` file, just make sure the file with that information is
+the first one listed.
+
+For anyone wanting to write books that involve a lot of code, I have built a plugin
+called `awesome_codeblock`. You can specify quite a few options that will make your
+codeblocks, well, more awesome. Check out `lib/author/plugins/awesome_codeblock.rb`
+for all the details.
 
 ## Dependencies
 
