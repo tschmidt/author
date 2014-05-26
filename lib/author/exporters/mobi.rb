@@ -3,7 +3,7 @@ module Author
     class Mobi < Base
       # 1. check that kindlegen is installed
       # 2. check that xhtml file exists
-      # 4. run kindlegen command
+      # 3. run kindlegen command
       
       def self.export
         exporter = new

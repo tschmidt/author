@@ -1,4 +1,8 @@
 ---
-  title: <%= name %>
-  markdown: kramdown
-  highlighter: coderay
+  eeepub:
+    title: <%= title %>
+    creator: <%= creator %>
+    publisher: <%= creator %>
+    date: <%= Time.now %>
+    identifier: Fill me in
+    uid: Fill me in

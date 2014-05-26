@@ -27,4 +27,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "liquid"
   spec.add_dependency "coderay"
   spec.add_dependency "kramdown"
+  spec.add_dependency "safe_yaml"
+  spec.add_dependency "eeepub"
+  spec.add_dependency "rubyzip"
+  spec.add_dependency "zip-zip"
 end

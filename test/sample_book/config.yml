@@ -1,4 +1,5 @@
 ---
-  title: test/sample_book
-  markdown: kramdown
-  highlighter: coderay
+  eeepub:
+    title: <%= title %>
+    creator: <%= creator %>
+    publisher: <%= creator %>

@@ -5,14 +5,14 @@ module Author
     class Generator < Thor::Group
       include Thor::Actions
       
-      argument :name
+      argument :title
       
       def set_destination_root
-        self.destination_root = File.join(self.destination_root, name)
+        self.destination_root = File.join(self.destination_root, title)
       end
       
       def create_project_structure
-        say "Creating directories for your new book, #{name}"
+        say "Creating directories for your new book, #{title}"
         empty_directory "chapters"
         empty_directory "export"
         empty_directory "templates"
@@ -42,6 +42,11 @@ module Author
       
       def self.source_root
         File.join(File.dirname(__FILE__), '..', 'templates')
+      end
+      
+      def creator
+        creator = `finger $USER 2> /dev/null | grep Login | colrm 1 46 2> /dev/null`.chomp
+        !creator.empty? ? creator : "John Doe"
       end
       
     end

@@ -26,6 +26,14 @@ module Author
         Author::Exporters::Mobi.export
       end
       
+      desc "epub", "Build ePub format"
+      def epub
+        say "Building the XHTML site"
+        Author::Exporters::XHTML.export
+        say "Building the epub file"
+        Author::Exporters::Epub.export
+      end
+      
     end
   end
 end

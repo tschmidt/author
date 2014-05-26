@@ -5,7 +5,7 @@ describe Author::Commands::Generator do
   
   it "should require a name" do
     output = capture(:stderr) { Author::Commands::Generator.start }
-    expect(output).to_include "No value provided for required arguments 'name'"
+    expect(output).to_include "No value provided for required arguments 'title'"
   end
   
   it "should create project structure" do
