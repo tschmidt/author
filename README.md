@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/tschmidt/author.svg?branch=master)](https://travis-ci.org/tschmidt/author) [![Dependency Status](https://gemnasium.com/tschmidt/author.svg)](https://gemnasium.com/tschmidt/author)
 
-**ATTN:** This is still **very** alpha. Not everything is working. Use at your own risk.
+**ATTN:** Everything should be working, however, I am keeping the gem in alpha for a little while longer. The first official release should be coming soon.
 
 *[imho]: In my humble opinion
 
