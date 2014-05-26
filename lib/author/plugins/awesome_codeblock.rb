@@ -99,7 +99,7 @@ module Author
         wrapped_code = ''
         code.strip.split("\n").each_with_index do |line, index|
           index += starting_line_number
-          line = "&nbsp;" if line.empty?
+          line = line.empty? ? "&nbsp" : CodeRay.scan(line, language.to_sym).html
           lines        += %Q[<div class="line-number#{' highlight' if lines_to_highlight && lines_to_highlight.include?(index)}">#{index}</div>]
           wrapped_code += %Q[<div class="code-part#{' highlight' if lines_to_highlight && lines_to_highlight.include?(index)}">#{line}</div>]
         end

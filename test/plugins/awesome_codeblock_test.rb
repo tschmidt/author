@@ -10,7 +10,7 @@ describe Author::Plugins::AwesomeCodeblock do
     it "should process the block into pretty code" do
       using_liquid_templates do
         rendered = liquid.parse(IO.read('no_options.md')).render
-        expect(rendered).to_include %q[puts "I'm awesome!"]
+        expect(rendered).to_include %q[puts &quot;I'm awesome!&quot;]
         expect(rendered).to_include %Q[<figure class="code text"><div class="CodeRay"><table class="code">]
         expect(rendered).to_not_include %q[<figcaption class='code-header'><span>]
         expect(rendered).to_not_include %q[<div class="line-number">]
