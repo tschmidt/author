@@ -22,4 +22,8 @@ describe Author::Commands::Builder do
     expect(output).to_include "epub"
   end
   
+  it "should respond to all" do
+    expect(output).to_include "all"
+  end
+  
 end

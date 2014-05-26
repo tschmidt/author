@@ -34,6 +34,18 @@ module Author
         Author::Exporters::Epub.export
       end
       
+      desc "all", "Build everything"
+      def all
+        say "Building the XHTMl site"
+        Author::Exporters::XHTML.export
+        say "Building PDF"
+        Author::Exporters::PDF.export
+        say "Building the .mobi file"
+        Author::Exporters::Mobi.export
+        say "Building the epub file"
+        Author::Exporters::Epub.export
+      end
+      
     end
   end
 end
