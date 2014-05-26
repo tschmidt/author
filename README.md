@@ -1,4 +1,4 @@
-# Author [![GitHub version](https://badge.fury.io/gh/tschmidt%2Fauthor.svg)](http://badge.fury.io/gh/tschmidt%2Fauthor)
+# Author [![Gem Version](https://badge.fury.io/rb/author.svg)](http://badge.fury.io/rb/author)
 
 [![Build Status](https://travis-ci.org/tschmidt/author.svg?branch=master)](https://travis-ci.org/tschmidt/author) [![Dependency Status](https://gemnasium.com/tschmidt/author.svg)](https://gemnasium.com/tschmidt/author)
 
