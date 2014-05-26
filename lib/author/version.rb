@@ -1,3 +1,3 @@
 module Author
-  VERSION = "1.1.5.alpha"
+  VERSION = "1.1.6.alpha"
 end
