@@ -91,6 +91,7 @@ There are 3 types which come with predefined styles though. They are `info`, `wa
 
 You can put any code supported by Kramdown in this block. Yippee!
 {% endsidebar %}
+```
 
 ## Dependencies
 
