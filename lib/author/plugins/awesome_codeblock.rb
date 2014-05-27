@@ -1,6 +1,6 @@
 # = AwesomeCodeblock
 #
-# This is a CodeRay plugin that allows you to output more awesome codeblocks.
+# This is a Liquid plugin that allows you to output more awesome codeblocks.
 # It was inspired by the code_ray_block plugin by git@codebykat.
 #
 # == Usage

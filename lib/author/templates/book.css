@@ -529,6 +529,7 @@ th {
 .CodeRay .head .head { color: #f4f; }
 
 figure.code {
+  background: #fff;
   border: 1px solid #d5d5d5;
   margin: 0 20px;
   border-radius: 2px;
@@ -578,6 +579,40 @@ figure.code figcaption {
 .CodeRay td.lines-of-code .highlight {
   background: #d5ffd5;
 }
+
+
+/*****************************************
+  Sidebar Styles
+*****************************************/
+
+.sidebar {
+  background: #e5ffe5;
+  border: 1px solid #44d544;
+  border-left: 8px solid #44d544;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.sidebar td {
+  padding: 20px;
+}
+
+.sidebar .sidebar-icon {
+  padding: 0;
+  text-align: center;
+  width: 5px;
+}
+
+.sidebar-warning {
+  background: #ffe5e5;
+  border-color: #d54444;
+}
+
+.sidebar-tip {
+  background: #d5efff;
+  border-color: #0099d5;
+}
+
 
 
 /*****************************************

@@ -1,0 +1,3 @@
+{% sidebar %}
+I am an info sidebar
+{% endsidebar %}

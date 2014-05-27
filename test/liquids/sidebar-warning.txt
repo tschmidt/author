@@ -1,0 +1,3 @@
+{% sidebar type:warning %}
+I am a warning sidebar
+{% endsidebar %}

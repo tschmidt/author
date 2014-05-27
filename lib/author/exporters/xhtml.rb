@@ -1,6 +1,7 @@
 require 'liquid'
 require 'kramdown'
 require 'author/plugins/awesome_codeblock'
+require 'author/plugins/sidebar'
 
 module Author
   module Exporters
