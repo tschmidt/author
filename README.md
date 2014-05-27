@@ -55,6 +55,8 @@ That's it!
 
 ## Extras
 
+### Table of Contents
+
 One of the nice things about using Kramdown is that it provides a way to generate a table
 of contents [TOC]. If you would like to add a TOC to your book, simply add a file to the
 `chapters/` folder - might I suggest `toc.md` - and include the following:
@@ -70,10 +72,25 @@ of contents [TOC]. If you would like to add a TOC to your book, simply add a fil
 Then, in the `outline.txt` file, just make sure the file with that information is
 the first one listed.
 
+### Codeblocks
+
 For anyone wanting to write books that involve a lot of code, I have built a plugin
 called `awesome_codeblock`. You can specify quite a few options that will make your
 codeblocks, well, more awesome. Check out `lib/author/plugins/awesome_codeblock.rb`
 for all the details.
+
+### Sidebars
+
+If you have a need for a sidebar, there is a Liquid plugin I created called `sidebar`. It takes an optional argument called `type` which can be anything you want and will be a class added to the resulting code.
+
+There are 3 types which come with predefined styles though. They are `info`, `warning`, and `tip`. `info` is the default and will be used if the `type` is not set. Here is an example:
+
+```
+{% sidebar type:tip %}
+#### I am a sidebar!
+
+You can put any code supported by Kramdown in this block. Yippee!
+{% endsidebar %}
 
 ## Dependencies
 
