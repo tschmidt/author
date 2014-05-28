@@ -24,7 +24,7 @@ Thus, Author was born.
 
 ## Installation
 
-    $ gem install author
+    $ gem install author --pre
 
 ## Usage  
 
