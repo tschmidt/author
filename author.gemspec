@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "minitest"
   spec.add_development_dependency "minitest-spec-expect"
+  spec.add_development_dependency "english"
   
   spec.add_dependency "thor",     "~> 0.19"
   spec.add_dependency "liquid",   "~> 2.6"
