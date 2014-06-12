@@ -1,8 +1,9 @@
 #!/usr/bin/env ruby
+# encoding: UTF-8
 # -*- mode: ruby -*-
 path = File.join(File.dirname(__FILE__), '..', 'lib')
 
-$:.unshift path
+$LOAD_PATH.unshift path
 
 require 'author'
 Author::Commands::Cli.start
