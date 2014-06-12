@@ -1,6 +1,4 @@
-# Encoding: UTF-8
-# For use/testing when author gem is not installed
-$LOAD_PATH.unshift File.dirname(__FILE__)
+$:.unshift File.dirname(__FILE__) # For use/testing when author gem is not installed
 
 # Convenience method that will require all files in the given path
 def require_all(path)
@@ -27,16 +25,14 @@ require_all 'author/commands'
 require_all 'author/plugins'
 require_all 'author/exporters'
 
-module Author # rubocop:disable Documentation
+module Author
+  
   def self.configuration(override = nil)
     config = Configuration[Configuration::DEFAULTS]
-    override = Configuration[get_override(override, config)].stringify_keys
+    override = Configuration[override || config.load_override_file || {}].stringify_keys
     config = Utils.deep_merge_hashes(config, override).stringify_keys
-
+    
     config
   end
-
-  def self.get_override(override, config)
-    override || config.load_override_file || {}
-  end
+  
 end
